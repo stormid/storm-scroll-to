@@ -1,4 +1,6 @@
-#Storm ScrollSpy
+#Storm ScrollTo
+
+Smooth scroll anchor links 
 
 ##Usage
 ```
@@ -11,7 +13,7 @@ ScrollTo.init('js-scrollto');
 ```
 
 ```html
-<nav class="js-scrollspy">
+<nav>
     <a href="#section1" class="js-scrollto">Section 1</a>
     <a href="#section2" class="js-scrollto">Section 2</a>
     <a href="#section3" class="js-scrollto">Section 3</a>
@@ -26,8 +28,10 @@ Defaults:
 
 ```javascript
 {
-	offset: 0,
-	activeClassName: 'active',
-	callback: null
+    easing: 'easeInOutCubic',
+    speed: 500,
+    offset: 0,
+    pushState: true,
+    callback: null
 }
 ``
