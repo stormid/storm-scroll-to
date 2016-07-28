@@ -86,8 +86,6 @@
                 }.bind(this));
             },
             scrollTo: function(el){
-                console.log(this);
-                console.log(el);
                 var docHeight = Math.max(
                         document.body.scrollHeight,
                         document.documentElement.scrollHeight,

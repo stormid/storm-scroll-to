@@ -1,6 +1,6 @@
 /**
- * @name storm-scrollto: 
- * @version 0.1.1: Thu, 28 Jul 2016 15:55:25 GMT
+ * @name storm-scrollto: Smooth scroll anchor links 
+ * @version 0.1.0: Thu, 28 Jul 2016 16:55:36 GMT
  * @author stormid
  * @license MIT
  */(function(root, factory) {
@@ -91,8 +91,6 @@
                 }.bind(this));
             },
             scrollTo: function(el){
-                console.log(this);
-                console.log(el);
                 var docHeight = Math.max(
                         document.body.scrollHeight,
                         document.documentElement.scrollHeight,
