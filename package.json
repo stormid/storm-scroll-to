@@ -1,7 +1,7 @@
 {
   "name": "storm-scrollto",
-  "version": "0.1.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Smooth scroll anchor links ",
   "author": "stormid",
   "license": "MIT",
   "repository": {
