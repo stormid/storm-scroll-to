@@ -1,6 +1,6 @@
 {
   "name": "storm-scrollto",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Smooth scroll anchor links, update the URL ad focus on the first child node of the target",
   "author": "stormid",
   "license": "MIT",
