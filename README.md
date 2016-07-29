@@ -29,9 +29,10 @@ Defaults:
 ```javascript
 {
     easing: 'easeInOutCubic',
-    speed: 500,
+    speed: 260,//ms
     offset: 0,
-    pushState: true,
+    pushState: true,//update the URL
+    focus: true,//focus on the first focusable child of the target node
     callback: null
 }
 ``

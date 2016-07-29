@@ -56,15 +56,17 @@
         },
         defaults = {
             easing: 'easeInOutCubic',
-            speed: 500,//duration to scroll the entire height of the document
+            speed: 260,//duration to scroll the entire height of the document
             offset: 0,
             pushState: true,
+            focus: true,
             callback: null
         },
         StormScrollTo = {
             init: function() {
                 this.initNavItems();
                 this.initListeners();
+                this.initFocusable();
                 return this;
             },
             initNavItems: function(){
@@ -84,6 +86,20 @@
                         }.bind(this), false);
                     }.bind(this));
                 }.bind(this));
+            },
+            initFocusable: function(){
+                if(!this.settings.focus) { return; }
+                var getFocusableChildren = function(node) {
+                        var focusableElements = ['a[href]', 'area[href]', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])', 'button:not([disabled])', 'iframe', 'object', 'embed', '[contenteditable]', '[tabindex]:not([tabindex="-1"])'];
+
+                        return [].slice.call(node.querySelectorAll(focusableElements.join(','))).filter(function (child) {
+                            return !!(child.offsetWidth || child.offsetHeight || child.getClientRects().length);
+                        });
+                    };
+                this.navItems.forEach(function(item){
+                    item.focusableChildren = getFocusableChildren(item.target);
+                });
+                return this;
             },
             scrollTo: function(el){
                 var docHeight = Math.max(
@@ -111,6 +127,8 @@
                         if (currentTime < duration) {
                             window.requestAnimationFrame(animate.bind(this));
                         } else {
+                            (!!this.settings.pushState && !!window.history.pushState) && window.history.pushState({ URL: el.node.getAttribute('href')}, '', el.node.getAttribute('href'));
+                            (!!this.settings.focus && !!el.focusableChildren.length) && window.setTimeout(function(){el.focusableChildren[0].focus();}.bind(this), 0);
                             !!this.settings.callback && this.settings.callback();
                         };
                     }.bind(this);
@@ -119,7 +137,10 @@
             destroy: function(){
                 this.navItems.forEach(function(el){
                     triggerEvents.forEach(function(ev){
-                        el.node.removeEventListener(ev, this.scrollTo.bind(this));
+                        el.node.removeEventListener(ev, function scrollTo(e){
+                            e.preventDefault();
+                            this.scrollTo(el);
+                        }.bind(this));
                     }.bind(this));
                 }.bind(this));
             }

@@ -61,6 +61,14 @@
         section {
             padding:30px 5%:
         }
+        button {
+            background:white;
+            border:1px solid grey;
+            padding:10px;
+        }
+        button:focus {
+            outline:1px solid red;
+        }
     </style>
 </head>
 <body>
@@ -70,13 +78,14 @@
         <a href="#section3" class="js-scrollto">Section 3</a>
     </nav>
     <section id="section1" style="height:100px">
-        Section 1
+        <h1>Section 1</h2>
     </section>
     <section id="section2" style="height:2000px">
-        Section 2
+        <h1>Section 2</h2>
     </section>
     <section id="section3" style="height:1500px">
-        Section 3
+        <h1>Section 3</h2>
+        <button>Focusable Node</button>
     </section>
     <script src="./js/app.js"></script>
 </body>
