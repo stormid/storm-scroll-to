@@ -8,8 +8,8 @@ npm i -S storm-scrollto
 ```
 
 ```javascript
-var ScrollSpy = require('storm-scrollto')
-ScrollTo.init('js-scrollto');
+var ScrollTo = require('storm-scrollto')
+ScrollTo.init('.js-scrollto');
 ```
 
 ```html

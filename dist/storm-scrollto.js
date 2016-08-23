@@ -1,6 +1,6 @@
 /**
- * @name storm-scrollto: Smooth scroll anchor links 
- * @version 0.1.1: Fri, 29 Jul 2016 08:50:16 GMT
+ * @name storm-scrollto: Smooth scroll anchor links, update the URL ad focus on the first child node of the target
+ * @version 0.2.0: Tue, 23 Aug 2016 15:50:42 GMT
  * @author stormid
  * @license MIT
  */(function(root, factory) {
