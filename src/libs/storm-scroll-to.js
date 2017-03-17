@@ -1,7 +1,7 @@
 /**
- * @name storm-scroll-to: Smooth scroll anchor links, update the URL and focus on the first child node of the target
- * @version 0.2.1: Fri, 10 Feb 2017 17:25:24 GMT
- * @author mjbp
+ * @name storm-scrollto: Smooth scroll anchor links, update the URL ad focus on the first child node of the target
+ * @version 1.0.0: Fri, 17 Mar 2017 17:33:32 GMT
+ * @author stormid
  * @license MIT
  */
 const triggerEvents = ['click', 'keydown'],
