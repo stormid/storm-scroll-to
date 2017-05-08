@@ -43,7 +43,6 @@ describe('Initialisation', () => {
 		ScrollToItem.should.have.property('initListeners').Function();
 		ScrollToItem.should.have.property('initFocusable').Function();
 		ScrollToItem.should.have.property('scrollTo').Function();
-		ScrollToItem.should.have.property('destroy').Function();
 	});
 	
 	it('should attach the handleClick eventListener to DOMElement click event to toggle className', () => {
@@ -52,14 +51,4 @@ describe('Initialisation', () => {
 		ScrollToItem.navItems[2].node.click();
 	});
 
-});
-
-describe('Destroy', () => {
-
-	let ScrollToItem = ScrollTo.init('.js-scroll-to', {
-		focus: false
-	});
-	it('should remove the eventListeners from the nav items', () => {
-		ScrollToItem.destroy();
-	});
 });
