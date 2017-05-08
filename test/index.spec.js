@@ -1,6 +1,6 @@
 import should from 'should';
-import ScrollTo from '../dist/storm-scroll-to';
 import 'jsdom-global/register';
+import ScrollTo from '../dist/storm-scroll-to.standalone';
 
 const html = `<nav class="js-scroll-spy">
             <a class="js-scroll-to" href="#section1">Section 1</a>

@@ -4,7 +4,9 @@
 [![codecov.io](http://codecov.io/github/mjbp/storm-scroll-to/coverage.svg?branch=master)](http://codecov.io/github/mjbp/storm-scroll-to?branch=master)
 [![npm version](https://badge.fury.io/js/storm-scroll-to.svg)](https://badge.fury.io/js/storm-scroll-to)
 
-Smooth scroll anchor links, update the URL and focus on the first child node of the target
+Smooth scroll anchor links, update the URL and focus on the first child node of the target.
+
+Can be used in conjunction with [https://mjbp.github.io/storm-scroll-spy](https://mjbp.github.io/storm-scroll-spy).
 
 ## Example
 [https://mjbp.github.io/storm-scroll-to](https://mjbp.github.io/storm-scroll-to)
