@@ -1,6 +1,6 @@
 /**
- * @name storm-scroll-to: Smooth scroll anchor links, update the URL ad focus on the first child node of the target
- * @version 1.0.4: Mon, 08 May 2017 11:37:49 GMT
+ * @name storm-scroll-to: Smooth scroll anchor links, update the URL and focus on the first child node of the target
+ * @version 1.0.9: Fri, 09 Mar 2018 14:44:04 GMT
  * @author stormid
  * @license MIT
  */

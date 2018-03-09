@@ -1,15 +1,13 @@
 # Storm Scroll To
 
-[![Build Status](https://travis-ci.org/mjbp/storm-scroll-to.svg?branch=master)](https://travis-ci.org/mjbp/storm-scroll-to)
-[![codecov.io](http://codecov.io/github/mjbp/storm-scroll-to/coverage.svg?branch=master)](http://codecov.io/github/mjbp/storm-scroll-to?branch=master)
 [![npm version](https://badge.fury.io/js/storm-scroll-to.svg)](https://badge.fury.io/js/storm-scroll-to)
 
 Smooth scroll anchor links, update the URL and focus on the first child node of the target.
 
-Can be used in conjunction with [https://mjbp.github.io/storm-scroll-spy](https://mjbp.github.io/storm-scroll-spy).
+Can be used in conjunction with [https://stormid.github.io/storm-scroll-spy](https://stormid.github.io/storm-scroll-spy) to set the active className on the anchor links.
 
 ## Example
-[https://mjbp.github.io/storm-scroll-to](https://mjbp.github.io/storm-scroll-to)
+[https://stormid.github.io/storm-scroll-to](https://stormid.github.io/storm-scroll-to)
 
 ## Usage
 HTML
@@ -54,7 +52,7 @@ Load('/content/js/async/storm-scroll-to.standalone.js')
 ## Options
 ```
 {
-    easing: 'easeInOutCubic',
+    easing: 'easeInOutCubic', //see src/lib/easing.js for availble easing functions
     speed: 260,//ms
     offset: 0,
     pushState: true,//update the URL
@@ -78,7 +76,7 @@ npm run test
 ## Browser support
 This is module has both es6 and es5 distributions. The es6 version should be used in a workflow that transpiles.
 
-This module depends upon Object.assign, element.classList, and Promises, available in all evergreen browsers. ie9+ is supported with polyfills, ie8+ will work with even more polyfills for Array functions and eventListeners.
+This module depends upon Object.assign available in all evergreen browsers. ie9+ is supported with polyfills, ie8+ will work with even more polyfills for Array functions and eventListeners.
 
 ## Dependencies
 None
