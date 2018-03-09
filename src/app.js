@@ -1,4 +1,4 @@
-import ScrollTo from './libs/storm-scroll-to';
+import ScrollTo from './libs/component';
 
 const onDOMContentLoadedTasks = [() => {
 	let scrollTo = ScrollTo.init('.js-scroll-to');
