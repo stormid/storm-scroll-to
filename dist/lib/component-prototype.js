@@ -2,6 +2,7 @@ import * as EASING from './easing';
 
 const TRIGGER_EVENTS = [window.PointerEvent ? 'pointerdown' : 'ontouchstart' in window ? 'touchstart' : 'click', 'keydown' ],
         INCREMENT_MS = 16;
+const KEYCODES = [32, 13];
 
 export default {
     init() {
@@ -23,6 +24,7 @@ export default {
         this.navItems.forEach(el => {
             TRIGGER_EVENTS.forEach(ev => {
                 el.node.addEventListener(ev, e => {
+                    if (!!e.keyCode && !~KEYCODES.indexOf(e.keyCode) || (e.which && e.which === 3)) return;
                     e.preventDefault();
                     this.scrollTo(el);
                 }, false);
